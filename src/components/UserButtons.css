@@ -1,0 +1,92 @@
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  width: 100%;
+  position: relative;
+  margin-top: clamp(5rem, 12vh, 10rem);  /* Increased margin-top for more space below header */
+}
+
+.btn {
+  width: clamp(220px, 33vw, 280px);
+  height: clamp(60px, 10vh, 85px);
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+  font-weight: bold;
+  border-radius: clamp(30px, 5vw, 42px);
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-teachers {
+  order: 2;
+}
+
+.btn-students {
+  order: 1;
+}
+
+
+@media screen and (max-width: 480px) {
+  .buttons-container {
+    margin-top: clamp(5rem, 12vh, 8rem);  
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    min-width: 200px;
+    min-height: 55px;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .buttons-container {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: clamp(10rem, 18vh, 15rem);  
+  }
+
+  .btn {
+    max-width: 350px;
+    max-height: 100px;
+    font-size: 2.2rem;
+  }
+}
+
+
+@media (hover: none) {
+  .btn {
+    transform: none;
+  }
+  
+  .btn:active {
+    background-color: #555;
+    transform: scale(0.98);
+  }
+}
+
+
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}

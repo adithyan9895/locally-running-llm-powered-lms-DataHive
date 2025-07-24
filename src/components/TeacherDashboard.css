@@ -1,0 +1,190 @@
+.teacher-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.25rem);
+  
+  background-color: #121212;
+  color: #ffffff;
+  padding: clamp(0.3rem, 1.5vw, 1rem) clamp(1.5rem, 4vw, 4rem);
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+
+.app-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  gap: clamp(1rem, 2vw, 1.25rem);
+  padding: 0 clamp(0.5rem, 2vw, 1.25rem);
+  
+}
+
+.left-section {
+  flex: 0.4;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.right-section {
+  flex: 0.6;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.75rem, 1.5vw, 0.938rem);
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+.upload-controls,
+.interaction-controls {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+.file-input,
+.text-input {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: clamp(0.5rem, 1vw, 0.625rem);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.file-input {
+  border: none;
+}
+
+.upload-button,
+.submit-button,
+.delete-button {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: clamp(0.5rem, 1vw, 0.625rem) clamp(0.75rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.upload-button:hover,
+.submit-button:hover,
+.delete-button:hover {
+  background-color: #4a4a4a;
+}
+
+.uploaded-items {
+  margin-top: clamp(1rem, 2vw, 1.25rem);
+}
+
+.item-card {
+  background-color: #2c2c2c;
+  padding: clamp(0.75rem, 1.5vw, 0.938rem);
+  border-radius: 4px;
+  margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-name {
+  font-weight: 500;
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.313rem);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.item-date {
+  font-size: clamp(0.75rem, 1.25vw, 0.9rem);
+  color: #aaa;
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.313rem);
+}
+
+.item-content {
+  font-size: clamp(0.75rem, 1.25vw, 0.9rem);
+  color: #888;
+  margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.answer-box {
+  background-color: #2c2c2c;
+  padding: clamp(0.75rem, 1.5vw, 0.938rem);
+  border-radius: 4px;
+  margin-bottom: clamp(1rem, 2vw, 1.25rem);
+}
+
+.answer-content {
+  background-color: #1e1e1e;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border-radius: 4px;
+  min-height: clamp(150px, 30vh, 200px);
+  font-size: clamp(0.875rem, 1.5vw, 1.1rem);
+}
+
+.item-card.selected {
+  background-color: #e3f2fd;
+  border: 1px solid #2196f3;
+}
+
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-dashboard {
+    padding: 0.5rem;
+  }
+  
+  .content {
+    padding: 0;
+  }
+}
+
+
+.text-input:focus,
+.file-input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+
+.upload-button:active,
+.submit-button:active,
+.delete-button:active {
+  background-color: #555;
+}
